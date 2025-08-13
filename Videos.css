@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* --- Video Player --- */
+.video-container {
+  flex: 2;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-player {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.like-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.like-button:hover {
+  background-color: #ddd;
+}
+
+.like-button.liked {
+  background-color: #0f9d58;
+  color: white;
+}
+
+/* --- Lessons Grid (YouTube style) --- */
+.video-buttons-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.lesson-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lesson-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.lesson-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.lesson-title {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* --- Compiler & Quiz --- */
+.compiler-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#compiler,
+#quiz {
+  width: 70%;
+  margin-left: 15vw;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* --- Comments Section --- */
+.comments-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comment-input input,
+.comment-input textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.comment-btn {
+  padding: 10px 20px;
+  background: #0f9d58;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.comment-btn:hover {
+  background: #0c7b43;
+}
+
+.comment-card {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.comment-header {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.comment-header strong {
+  color: #000;
+}
+
+.comment-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.comment-actions {
+  margin-top: 5px;
+}
+
+.comment-actions button {
+  background: none;
+  border: none;
+  color: #0f9d58;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* --- Notes Section --- */
+.notes-section {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.notes-section textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .video-buttons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .video-buttons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .video-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.typing-dots span {
+  animation: blink 1.5s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
