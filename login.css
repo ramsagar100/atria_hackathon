@@ -1,0 +1,117 @@
+#loginpage {
+    /* background-image: url('/login_background.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #151d2d; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  
+    font-family: 'Arial', sans-serif;
+}
+
+#loginpage form {
+    background: rgba(255, 255, 255, 0.1);
+    width: 330px;  /* Same width as .coursesCard */
+    height: 468px; /* Same height as .coursesCard */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+#loginpage h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#loginpage label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+#loginpage input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#loginpage input:focus {
+    border: 2px solid #4caf50;
+}
+
+#loginpage button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#loginpage button:hover {
+    background: #45a049;
+}
+
+#loginpage p {
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+#loginpage p a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#loginpage p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #loginpage form {
+        width: 90%;
+        height: auto;
+    }
+}
+.toast-success {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .toast-error {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .small-toast {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    width: fit-content !important;
+    min-width: 200px !important;
+  }
+  
+  .Toastify__toast {
+    max-width: 250px !important; /* Reduce toast width */
+  }
+  
+  .Toastify__toast-container--top-right {
+    top: 20px !important; /* Move toast slightly lower */
+    right: 20px !important;
+  }
+  
